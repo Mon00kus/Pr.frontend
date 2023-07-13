@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row" style="width : 100%">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card text-center" style="padding: 20px;">
+        <h3>Registrarse</h3>
+        <br>
+        <form [formGroup]="register" (ngSubmit)="registrarUsuario()">
+          <div class="form-group mb-3" style="text-align:start;">
+            <input class="form-control" type="text" placeholder="Usuario" formControlName="usuario"/>
+            <span class="text-danger ml-2"
+                  *ngIf="register.get('usuario')?.hasError('required') && register.get('usuario')?.touched">
+                El usuario <strong> es requerido</strong>
+            </span>
+          </div>
+          <div class="form-group mb-3 mt-3" style="text-align:start;">
+            <input class="form-control" type="password" placeholder="Clave de usuario" formControlName="password" minlength="8"/>
+            <span class="text-danger ml-2"
+                *ngIf="register.get('password')?.hasError('required') && register.get('password')?.touched">
+                La clave <strong> es requerida</strong>
+            </span>
+            <span class="text-danger ml-2"
+                *ngIf="register.get('password')?.hasError('minlength') && register.get('password')?.touched">
+                <strong>Mínimo 8 caracteres</strong>
+            </span>
+          </div>
+          <div class="form-group mb-3 mt-3" style="text-align:start;">
+            <input class="form-control" type="password" placeholder="Repetir contraseña" formControlName="confirmPassword" minlength="8"/>
+            <span class="text-danger ml-2"
+                *ngIf="register.get('confirmPassword')?.hasError('required') && register.get('confirmPassword')?.touched">
+                La confirmación <strong> es requerida</strong>
+            </span>
+            <span class="text-danger ml-2"
+                *ngIf="register.get('confirmPassword')?.hasError('minlength') && register.get('confirmPassword')?.touched">
+                <strong>Mínimo 8 caracteres</strong>
+            </span>
+            <span class="text-danger ml-2"
+                *ngIf="register.hasError('notSame') ">
+                Contraseñas <strong> distintas</strong>
+            </span>
+          </div>
+          <div class="form-group mb-2">
+            <button [disabled]="this.register.invalid" class="btn btn-primary btn-register" type="submit">Aceptar</button> &nbsp;
+            <button class="btn btn-secondary mr-2" routerLink="/inicio/login">Volver</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
