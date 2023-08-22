@@ -25,14 +25,18 @@ export class LoginService {
     return this.http.post(this.myAppUrl+this.myApiUrl, usuario);
   }
 
-  setLocalStorageUsr( data : any ) : void{
-    localStorage.setItem('token',data);
+  setLocalStorageUsr( data : any ) : void{    
+    localStorage.setItem('nombreUsuario', data.nombreUsuario);
   }
 
   getLocalStorageUsr() : string{
     var nUsr = localStorage.getItem('nombreUsuario');
     if (nUsr == null) return 'No existe Info';
     return nUsr;
+  }
+
+  removeLocalStorageUsr() : void{
+    localStorage.removeItem('nombreUsuario');
   }
 
   getLocalStorageTkn(): string{
@@ -42,13 +46,14 @@ export class LoginService {
   }
 
   getLocalStorageTknDecoded() : any {
-    const helper = new JwtHelperService();
-    var tkn = localStorage.getItem('token');
+    const helper = new JwtHelperService();    
+    var tkn = localStorage.getItem('token');        
+    tkn = tkn ===  null ? '' : tkn;      
     const decodeToken = helper.decodeToken(tkn);
     return decodeToken;
   }
 
-  removeLocalStorageUsr(): void {
+  removeLocalStorageTkn(): void {
     localStorage.removeItem('token');
   }
 }

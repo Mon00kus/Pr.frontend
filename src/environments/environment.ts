@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   myAppUrl  : '',
-  myApiUrlUsr  : '/api/usuario/',
-  myApiUrllog  : '/api/login/',
+  myApiUrlUsr  : '/api/usuario',
+  myApiUrllog  : '/api/login',
   endPoint : 'http://localhost:29557'
 };
 
