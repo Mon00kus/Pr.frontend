@@ -18,7 +18,6 @@ export class LoginService {
   constructor(private http : HttpClient) {
     this.myAppUrl = environment.endPoint;
     this.myApiUrl = environment.myApiUrllog;
-
   }
 
   login(usuario : Usuario) : Observable<any>{
@@ -48,9 +47,13 @@ export class LoginService {
   getLocalStorageTknDecoded() : any {
     const helper = new JwtHelperService();    
     var tkn = localStorage.getItem('token');        
-    tkn = tkn ===  null ? '' : tkn;      
+    tkn = tkn ===  null ? '' : tkn;
     const decodeToken = helper.decodeToken(tkn);
     return decodeToken;
+  }
+
+  setLocalStorageTkn( data : any ) : void{    
+    localStorage.setItem('token', data.token);
   }
 
   removeLocalStorageTkn(): void {

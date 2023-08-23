@@ -15,11 +15,11 @@ export class CuestionariosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.nombreUsuario = this.getNombreUsuario();
+    this.getNombreUsuario();
   }
 
-  getNombreUsuario () : string{
-    return this.loginService.getLocalStorageUsr();
+  getNombreUsuario () : void {
+     this.nombreUsuario = this.loginService.getLocalStorageTknDecoded().sub; 
   }
 
 }

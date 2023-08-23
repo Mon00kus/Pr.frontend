@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logOut() : void{
-     this.loginService.removeLocalStorageUsr();
+     this.loginService.removeLocalStorageTkn();
      this.router.navigate(['/inicio']);
   }
 
