@@ -24,9 +24,9 @@ const routes: Routes = [
     { path: '', component: CuestionariosComponent },
     { path: 'cambiarPassword', component: CambiarPasswordComponent },
     { path: 'nuevoCuestionario', component: NuevoCuestionarioComponent, children:[
-        {path:'pasoUno', component: PasoUnoComponent},
-        {path:'pasoDos', component: PasoDosComponent}
-    ]}
+        {path: 'pasoUno', component: PasoUnoComponent},
+        {path: 'pasoDos', component: PasoDosComponent}
+    ]},
   ]},
   { path: '**', redirectTo: '/inicio', pathMatch: 'full' }
 ];

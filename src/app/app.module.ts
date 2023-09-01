@@ -9,6 +9,9 @@ import { AppRoutingModule } from './app-rounting.module';
 import { ToastrModule } from 'ngx-toastr';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
+// Interceptors
+import { AddTokenInterceptor } from '../app/helpers/add-token.interceptor'
+
 //Components
 import { AppComponent } from './app.component';
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -20,7 +23,8 @@ import { CuestionariosComponent } from './components/dashboard/cuestionarios/cue
 import { NavbarComponent } from './components/dashboard/navbar/navbar.component';
 import { CambiarPasswordComponent } from './components/dashboard/cambiar-password/cambiar-password.component';
 import { LoadingComponent } from './shared/loading/loading.component';
-import { AddTokenInterceptor } from '../app/helpers/add-token.interceptor'
+import { NuevoCuestionarioComponent} from './components/dashboard/cuestionarios/nuevo-cuestionario/nuevo-cuestionario.component';
+import { PasoUnoComponent } from './components/dashboard/cuestionarios/nuevo-cuestionario/paso-uno/paso-uno.component'
 
 
 @NgModule({
@@ -35,6 +39,8 @@ import { AddTokenInterceptor } from '../app/helpers/add-token.interceptor'
     NavbarComponent,
     CambiarPasswordComponent,
     LoadingComponent,
+    NuevoCuestionarioComponent,
+    PasoUnoComponent
   ],
   imports: [
     BrowserModule,
