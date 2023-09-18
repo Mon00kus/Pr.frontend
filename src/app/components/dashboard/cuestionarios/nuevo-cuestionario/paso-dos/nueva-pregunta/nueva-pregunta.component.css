@@ -1,0 +1,101 @@
+.delete-icon{
+    font-size:39px;
+    cursor: pointer;
+    color:#ce4b4b;
+}
+
+.add-icon{
+    font-size: 39px;
+    cursor: pointer;
+    float: right;
+}
+
+/* input[type="radio"] {
+    appearance: none;
+    color: #fff;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.50em;
+    height: 1.50em;
+    border: 0.15em solid currentColor;
+    border-radius: 70%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.375em; 
+  height: 0.375em; 
+  border-radius: 50%; 
+  transform: scale(0); 
+  transition: 120ms transform ease-in-out;
+  background-color: currentColor;
+}
+
+input[type="radio"]::after {
+    
+    width: 0em; 
+    height: 0em; 
+    border-radius: 0%; 
+    transform: scale(0); 
+    transition: 120ms transform ease-in-out;
+    background-color: currentColor;
+}
+
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+}
+  
+input[type="radio"]:checked::before {
+    transform: scale(1); 
+}
+
+.form-control:focus-within {
+    color: var(--form-control-color);
+} */
+input[type="radio"] {
+    appearance: none;
+    color: #fff;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.50em;
+    height: 1.50em;
+    border: 0.15em solid currentColor;
+    border-radius: 70%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 70%;
+  transform: scale(1);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color); 
+  background-color:  #fff/* CanvasText */;
+}
+
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+    background-color:  #0d05f2/* CanvasText */;
+}
+  
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+.form-control:focus-within {
+    color: var(--form-control-color);
+}
+

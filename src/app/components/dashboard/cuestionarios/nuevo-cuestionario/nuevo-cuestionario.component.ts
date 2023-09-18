@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-nuevo-cuestionario',
@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./nuevo-cuestionario.component.css']
 })
 export class NuevoCuestionarioComponent {
-
 }

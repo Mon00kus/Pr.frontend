@@ -25,6 +25,8 @@ import { CambiarPasswordComponent } from './components/dashboard/cambiar-passwor
 import { LoadingComponent } from './shared/loading/loading.component';
 import { NuevoCuestionarioComponent} from './components/dashboard/cuestionarios/nuevo-cuestionario/nuevo-cuestionario.component';
 import { PasoUnoComponent } from './components/dashboard/cuestionarios/nuevo-cuestionario/paso-uno/paso-uno.component'
+import { PasoDosComponent } from './components/dashboard/cuestionarios/nuevo-cuestionario/paso-dos/paso-dos.component';
+import { NuevaPreguntaComponent } from './components/dashboard/cuestionarios/nuevo-cuestionario/paso-dos/nueva-pregunta/nueva-pregunta.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { PasoUnoComponent } from './components/dashboard/cuestionarios/nuevo-cue
     CambiarPasswordComponent,
     LoadingComponent,
     NuevoCuestionarioComponent,
-    PasoUnoComponent
+    PasoUnoComponent,
+    PasoDosComponent,
+    NuevaPreguntaComponent
   ],
   imports: [
     BrowserModule,

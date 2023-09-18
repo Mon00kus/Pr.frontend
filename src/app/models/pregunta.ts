@@ -8,5 +8,6 @@ export class Pregunta{
         listRespuestas : Respuesta[]){
             this.descripcion = descripcion;
             this.listRespuestas = listRespuestas;
+            this.hide = true;
     }
 }

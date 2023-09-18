@@ -1,1 +1,40 @@
-<p>nueva-pregunta works!</p>
+<form [formGroup]="nuevaPregunta" style="text-align: center;">
+    <div class="form-group input-group-lg" style="padding-bottom: 20px;">
+        <input type="text" class="form-control" placeholder="Ingrese Pregunta" formControlName="titulo">
+        <span class="text-danger" *ngIf="nuevaPregunta.get('titulo')?.hasError('required') && nuevaPregunta.get('titulo')?.touched">
+            La pregunta <strong>es requerida</strong>
+        </span>
+    </div>
+    <div formArrayName = "respuestas" *ngFor="let item of getRespuestas.controls; let i = index">
+        <div class="input-group" [formGroupName]="i" style="padding-top: 10px;">
+            <input type="text" class="form-control" placeholder="Respuesta {{ i + 1 }}" formControlName="descripcion">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <!-- <input type="radio" name="esCorrecta" (change)="setRespuestaValida(i)" [value]="i" formControlName="esCorrecta" > -->                    
+                    <input type="radio" 
+                           name="esCorrecta" 
+                           (click)="setRespuestaValida(i)" 
+                           [value]="item.get('esCorrecta')?.value" 
+                           formControlName="esCorrecta" 
+                           [checked]="i === 0">
+                </div>
+            </div>
+            <span class="material-icons delete-icon" (click)="eliminarRespuesta(i)">
+                delete
+            </span>
+        </div>
+        <span class="text-danger" *ngIf="item.get('descripcion')?.hasError('required') && item.get('descripcion')?.touched">
+           La respuesta <strong> es requerida</strong>
+        </span>
+    </div>
+    <span class="material-icons add-icon" (click)="agregarRespuesta()">
+        add
+    </span>
+
+    <br>
+    <br>
+    <button class="btn btn-primary" 
+            style="margin-left: 600px;margin-top: 20px;" 
+            [disabled]="nuevaPregunta.invalid" 
+            (click)="agregarPregunta()">Agregar</button>
+</form>
