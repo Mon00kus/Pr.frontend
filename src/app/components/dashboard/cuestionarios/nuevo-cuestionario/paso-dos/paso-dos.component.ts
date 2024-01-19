@@ -40,7 +40,7 @@ export class PasoDosComponent implements OnInit{
 
   guardarCuestionario(): void {
 
-    const cuestionario: Cuestionario = {
+    let cuestionario: Cuestionario = {
       nombre: this.tituloCuestionario,
       descripcion: this.descripcionCuestionario,
       listPreguntas: this.listPreguntas,
@@ -48,13 +48,15 @@ export class PasoDosComponent implements OnInit{
     };
 
     this.loading = true;
-    /* console.log(cuestionario); */
+
     // Enviamos cuestionario al back
     this.cuestionarioS.guardarCuestionario(cuestionario).subscribe(data => {
+
       this.toastr.success('El cuestionario fue registrado con exito', 'Cuestionario Registrado');
       this.router.navigate(['/dashboard']);
-       this.loading = false; 
+       this.loading = false;
     }, error => {
+      console.log(error);
       this.toastr.error('Opps.. Ocurrio un error!', 'Error');
       this.router.navigate(['/dashboard']);
       this.loading = false;

@@ -22,6 +22,6 @@ export class CuestionarioService {
   }
 
   guardarCuestionario(cuestionario: Cuestionario) : Observable<any>{
-    return this.http.post(this.myApiUrl + this.myApiUrl, cuestionario)
+    return this.http.post(this.myAppUrl + this.myApiUrl, cuestionario);
   }
 }

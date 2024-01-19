@@ -15,7 +15,7 @@ import { Respuesta } from 'src/app/models/respuesta';
 export class NuevaPreguntaComponent implements OnInit {
 
   nuevaPregunta: FormGroup;
-  pregunta? : Pregunta ;
+  pregunta? : Pregunta;
   rtaCorrecta = 0;
   @Output() enviarPregunta = new EventEmitter<Pregunta>();
 
