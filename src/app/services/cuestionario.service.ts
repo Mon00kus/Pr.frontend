@@ -19,6 +19,7 @@ export class CuestionarioService {
 
     this.myAppUrl = environment.endPoint;
     this.myApiUrl = environment.myApiUrlCue;
+    
   }
 
   guardarCuestionario(cuestionario: Cuestionario) : Observable<any>{

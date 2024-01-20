@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
     this.usuarioService.saveUser(usuario).subscribe (data => {
 
       console.log(data);
-      this.toastr.success('El usuario ' + usuario.nombreUsuario  + ' registrado exitosamente', 'Usuario registrado');
+      this.toastr.success('Usuario ' + usuario.nombreUsuario  + ' registrado exitosamente', 'Usuario registrado');
       this.router.navigate(['/inicio/login']);
       this.loading = false;
 

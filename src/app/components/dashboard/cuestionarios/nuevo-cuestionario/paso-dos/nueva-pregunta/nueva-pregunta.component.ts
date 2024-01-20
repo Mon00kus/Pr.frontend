@@ -50,7 +50,7 @@ export class NuevaPreguntaComponent implements OnInit {
   }
   eliminarRespuesta(index: number): void {
     if (this.getRespuestas.length === 2){
-      this.toastr.error('Como minimo la pregunta debe contener 2 respuestas', 'Error!');
+      this.toastr.error('Como minimo la pregunta debe contener 2 respuestas', 'Incorrecto');
     } else {
       this.getRespuestas.removeAt(index);
     }

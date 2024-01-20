@@ -22,7 +22,7 @@ export class UsuarioService {
   }
   //localhost:port/api/Usuario/CambiarPassword
   saveUser(usuario:Usuario): Observable<any>{
-
+    
     return this.http.post(this.myAppUrl + this.myApiUrl, usuario);
 
   }

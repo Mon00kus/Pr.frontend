@@ -10,7 +10,6 @@
             <input type="text" class="form-control" placeholder="Respuesta {{ i + 1 }}" formControlName="descripcion">
             <div class="input-group-prepend">
                 <div class="input-group-text">
-                    <!-- <input type="radio" name="esCorrecta" (change)="setRespuestaValida(i)" [value]="i" formControlName="esCorrecta" > -->                    
                     <input type="radio" 
                            name="esCorrecta" 
                            (click)="setRespuestaValida(i)" 
@@ -30,7 +29,6 @@
     <span class="material-icons add-icon" (click)="agregarRespuesta()">
         add
     </span>
-
     <br>
     <br>
     <button class="btn btn-primary" 
