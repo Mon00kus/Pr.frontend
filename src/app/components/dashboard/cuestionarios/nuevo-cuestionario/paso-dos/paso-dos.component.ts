@@ -14,7 +14,7 @@ import { CuestionarioService } from 'src/app/services/cuestionario.service';
   styleUrls: ['./paso-dos.component.css']
 })
 export class PasoDosComponent implements OnInit{
-  
+
   tituloCuestionario : string ='';
   descripcionCuestionario : string='';
   listPreguntas : Pregunta[] = [] ;
@@ -47,17 +47,18 @@ export class PasoDosComponent implements OnInit{
       /* fechaCreacion: not asigned */
     };
 
+    console.log(cuestionario);
+
     this.loading = true;
 
     // Enviamos cuestionario al back
     this.cuestionarioS.guardarCuestionario(cuestionario).subscribe(data => {
-
-      this.toastr.success('El cuestionario fue registrado con exito', 'Cuestionario Registrado');
-      this.router.navigate(['/dashboard']);
+       this.toastr.success('El cuestionario fue registrado con exito', 'Cuestionario Registrado');
+       this.router.navigate(['/dashboard']);
        this.loading = false;
     }, error => {
       console.log(error);
-      this.toastr.error('Opps.. Ocurrio un error!', 'Error');
+      this.toastr.error('Ocurrió un error al guardar el questionario !!!', 'Error');
       this.router.navigate(['/dashboard']);
       this.loading = false;
     });

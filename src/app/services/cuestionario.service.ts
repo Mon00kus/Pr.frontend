@@ -15,11 +15,11 @@ export class CuestionarioService {
   myAppUrl : string ;
   myApiUrl : string ;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
 
     this.myAppUrl = environment.endPoint;
     this.myApiUrl = environment.myApiUrlCue;
-    
+
   }
 
   guardarCuestionario(cuestionario: Cuestionario) : Observable<any>{

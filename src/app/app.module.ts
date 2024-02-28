@@ -54,7 +54,11 @@ import { NuevaPreguntaComponent } from './components/dashboard/cuestionarios/nue
     ToastrModule.forRoot(),
     HttpClientModule
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AddTokenInterceptor, multi:true}],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, 
+    useClass: AddTokenInterceptor, 
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

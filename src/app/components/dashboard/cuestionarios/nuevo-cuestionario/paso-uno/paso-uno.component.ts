@@ -16,15 +16,16 @@ export class PasoUnoComponent  implements OnInit  {
    */
   constructor(private fb: FormBuilder,
     private router: Router,
-    private cuestionarioService: CuestionarioService) {
-    
+    private cuestionarioService: CuestionarioService)
+  {
+
       this.datosCuestionario = this.fb.group({
         titulo: ['', Validators.required],
         descripcion: ['', Validators.required]
       });
-    
+
   }
-  
+
   ngOnInit(): void {
   }
 

@@ -24,14 +24,14 @@ export class LoginService {
     return this.http.post(this.myAppUrl+this.myApiUrl, usuario);
   }
 
-  setLocalStorageUsr( data : any ) : void{    
+  setLocalStorageUsr( data : any ) : void{
     localStorage.setItem('nombreUsuario', data.nombreUsuario);
   }
 
   getLocalStorageUsr() : string{
-    var nUsr = localStorage.getItem('nombreUsuario');
-    if (nUsr == null) return 'No existe Info';
-    return nUsr;
+    var nomUsr = localStorage.getItem('nombreUsuario');
+    if (nomUsr == null) return 'No existe Info';
+    return nomUsr;
   }
 
   removeLocalStorageUsr() : void{
@@ -45,14 +45,14 @@ export class LoginService {
   }
 
   getLocalStorageTknDecoded() : any {
-    const helper = new JwtHelperService();    
-    var tkn = localStorage.getItem('token');        
+    const helper = new JwtHelperService();
+    var tkn = localStorage.getItem('token');
     tkn = tkn ===  null ? '' : tkn;
     const decodeToken = helper.decodeToken(tkn);
     return decodeToken;
   }
 
-  setLocalStorageTkn( data : any ) : void{    
+  setLocalStorageTkn( data : any ) : void{
     localStorage.setItem('token', data.token);
   }
 

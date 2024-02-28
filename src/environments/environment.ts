@@ -8,7 +8,8 @@ export const environment = {
   myApiUrlUsr  : '/api/usuario',
   myApiUrllog  : '/api/login',
   myApiUrlCue  : '/api/cuestionario',
-  endPoint : 'http://localhost:29557'
+  endPoint : 'http://localhost:50451'
+  //endPoint : 'http://localhost:29557'
 };
 
 /*
