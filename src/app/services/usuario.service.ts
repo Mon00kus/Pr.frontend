@@ -17,12 +17,11 @@ export class UsuarioService {
   constructor(private http : HttpClient) {
 
     this.myAppUrl = environment.endPoint ;
-    this.myApiUrl = environment.myApiUrlUsr;
-
+    this.myApiUrl = '/api/usuario';
   }
   //localhost:port/api/Usuario/CambiarPassword
   saveUser(usuario:Usuario): Observable<any>{
-    
+
     return this.http.post(this.myAppUrl + this.myApiUrl, usuario);
 
   }

@@ -17,7 +17,7 @@ export class LoginService {
 
   constructor(private http : HttpClient) {
     this.myAppUrl = environment.endPoint;
-    this.myApiUrl = environment.myApiUrllog;
+    this.myApiUrl = '/api/login';
   }
 
   login(usuario : Usuario) : Observable<any>{
