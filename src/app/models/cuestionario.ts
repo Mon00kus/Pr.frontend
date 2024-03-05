@@ -1,11 +1,12 @@
 import { Pregunta } from "./pregunta";
 
 export class Cuestionario{
-    id?: number;
+    id: number = 0;
     nombre: string;
     descripcion: string;
     fechaCreacion?: Date;
     listPreguntas: Pregunta[];
+    usuario: any;
     constructor (nombre: string, descripcion: string, fechaCreacion: Date, listPreguntas: Pregunta[]){
         this.nombre        = nombre;
         this.descripcion   = descripcion;

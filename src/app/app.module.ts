@@ -30,6 +30,8 @@ import { NuevaPreguntaComponent } from './components/dashboard/cuestionarios/nue
 import { IngresarNombreComponent } from './components/inicio/list-cuestionarios/ingresar-nombre/ingresar-nombre.component';
 import { PreguntaComponent } from './components/inicio/list-cuestionarios/pregunta/pregunta.component';
 import { RespuestaCuestionarioComponent } from './components/inicio/list-cuestionarios/respuesta-cuestionario/respuesta-cuestionario.component';
+import { CuetionarioComponent } from './components/dashboard/cuestionarios/cuetionario/cuetionario.component';
+import { ListCuestionariosComponent } from './components/inicio/list-cuestionarios/list-cuestionarios.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { RespuestaCuestionarioComponent } from './components/inicio/list-cuestio
     NuevaPreguntaComponent,
     IngresarNombreComponent,
     PreguntaComponent,
-    RespuestaCuestionarioComponent
+    RespuestaCuestionarioComponent,
+    CuetionarioComponent,
+    ListCuestionariosComponent
   ],
   imports: [
     BrowserModule,
@@ -61,8 +65,8 @@ import { RespuestaCuestionarioComponent } from './components/inicio/list-cuestio
     HttpClientModule
   ],
   providers: [{
-    provide: HTTP_INTERCEPTORS, 
-    useClass: AddTokenInterceptor, 
+    provide: HTTP_INTERCEPTORS,
+    useClass: AddTokenInterceptor,
     multi:true
   }],
   bootstrap: [AppComponent]

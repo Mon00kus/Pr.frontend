@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
 
   register : FormGroup;
 
-  loading = false;
+  loading : boolean = false;
 
   constructor(private fb: FormBuilder
             , private usuarioService : UsuarioService

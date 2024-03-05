@@ -41,9 +41,11 @@ export class PasoDosComponent implements OnInit{
   guardarCuestionario(): void {
 
     let cuestionario: Cuestionario = {
+      id : 0,
       nombre: this.tituloCuestionario,
       descripcion: this.descripcionCuestionario,
       listPreguntas: this.listPreguntas,
+      usuario: null
       /* fechaCreacion: not asigned */
     };
 

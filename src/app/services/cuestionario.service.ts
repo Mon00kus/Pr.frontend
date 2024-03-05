@@ -33,7 +33,7 @@ export class CuestionarioService {
   }
 
   getCuestionario(idCuestionario: number): Observable<any>{
-    return this.http.get(this.myAppUrl + this.myApiUrl + idCuestionario);
+    return this.http.get(this.myAppUrl + this.myApiUrl + "/" + idCuestionario);
   }
 
   getListCuestionarios(): Observable<any>{

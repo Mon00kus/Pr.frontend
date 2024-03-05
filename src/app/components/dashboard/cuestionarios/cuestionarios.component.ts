@@ -16,7 +16,7 @@ export class CuestionariosComponent implements OnInit {
 
   nombreUsuario : string = '';
   listCuestionarios: Cuestionario[] = [];
-  loading = false;
+  loading: boolean = false;
 
   constructor(private loginService : LoginService,
               private cuestionarioService : CuestionarioService,
