@@ -17,7 +17,7 @@ export class ListCuestionariosComponent implements OnInit{
   constructor(private cuestionarioService: CuestionarioService
             , private router: Router
             , private respuestaCuestionario: RespuestaCuestionarioService
-            ){}
+            ) {}
 
   ngOnInit(): void {
     this.getListCuetionarios();

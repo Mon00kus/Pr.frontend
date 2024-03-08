@@ -9,7 +9,7 @@
         class="btn btn-success btn-block btn-cues"
         routerLink="/dashboard/nuevoCuestionario/pasoUno"
       >
-        NUEVO CUESTIONARIO
+        Nuevo cuestionario
       </button>
     </div>
   </div>
@@ -27,8 +27,8 @@
           <div class="card-body text-center">
             <h4 class="card-title">{{ cuestionario.nombre }}</h4>
             <p class="card-text">{{ cuestionario.descripcion }}</p>
-            <button class="btn btn-success radius" routerLink="/dashboard/verCuestionario/{{ cuestionario.id }}">VER</button>
-            <button class="btn btn-danger radius" (click)="eliminarCuestionario(cuestionario.id)">ELIMINAR</button>
+            <button class="btn btn-success radius" routerLink="/dashboard/verCuestionario/{{ cuestionario.id }}">ver</button>
+            <button class="btn btn-danger radius" (click)="eliminarCuestionario(cuestionario.id)">Eliminar</button>
           </div>
         </div>
       </div>
