@@ -1,6 +1,6 @@
 import { Pregunta } from "./pregunta";
 
-export class Cuestionario{
+export class Cuestionario {
     id: number = 0;
     nombre: string;
     descripcion: string;

@@ -31,7 +31,6 @@ export class PasoDosComponent implements OnInit{
 
   guardarPregunta(pregunta:Pregunta): void {
     this.listPreguntas.push(pregunta);
-    console.log(this.listPreguntas);
   }
 
   eliminarPregunta(index : number ): void{
@@ -48,8 +47,6 @@ export class PasoDosComponent implements OnInit{
       usuario: null
       /* fechaCreacion: not asigned */
     };
-
-    console.log(cuestionario);
 
     this.loading = true;
 

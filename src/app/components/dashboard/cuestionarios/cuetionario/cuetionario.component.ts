@@ -29,7 +29,6 @@ export class CuetionarioComponent implements OnInit {
     this.cuestionarioService.getCuestionario(this.idCuestionario).subscribe(data=> {
       this.loading = false;
       this.cuestionario = data;
-      console.log(data);
     });
   }
 

@@ -28,7 +28,6 @@ export class ListCuestionariosComponent implements OnInit{
     this.cuestionarioService.getListCuestionarios().subscribe(data=> {
       this.loading = false;
       this.listCuestionarios = data;
-      console.log(data);
     });
   }
 

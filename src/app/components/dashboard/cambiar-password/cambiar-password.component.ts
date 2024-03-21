@@ -45,10 +45,9 @@ export class CambiarPasswordComponent implements OnInit {
       passwordAnterior : this.cambiarPassword.value.passwordAnterior,
       nuevaPassword : this.cambiarPassword.value.nuevaPassword
     }
-    console.log('Antes de enviar:' + changePassword);
 
     this.loading = true;
-    
+
     this.usuarioService.changePassword(changePassword).subscribe(data=>{
         this.toastr.info(data.message,'Clave modificada!');
         this.router.navigate(['/dashboard'])
@@ -58,7 +57,6 @@ export class CambiarPasswordComponent implements OnInit {
       console.log(error);
       this.toastr.error(error.error.message, 'Error!');
     });
-    //console.log(changePassword);
     //this.cambiarPassword.reset();
   }
 }

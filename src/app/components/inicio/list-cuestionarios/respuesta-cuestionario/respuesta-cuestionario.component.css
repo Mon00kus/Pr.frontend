@@ -1,0 +1,62 @@
+.container{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  text-align: center;
+  padding: 20px;
+}
+
+.correct{
+ float: right;
+ color: #17a2b8;
+ font-size: 25px;
+ margin-left: -25px;
+}
+
+.incorrect{
+  float: right;
+  color: #da2d2d;
+  font-size: 25px;
+  margin-left: -25px;
+}
+
+.card-header {
+  background-color: #f4d4f0; /* Un color de fondo ligeramente gris para que se distinga, pero se puede ajustar */
+  border: 1px solid #a50595; /* Un borde sutil */
+  border-radius: 0.3rem; /* Bordes redondeados para seguir el estilo de Bootstrap */
+  padding: 0.75rem 1.25rem; /* Espaciado interno para que el contenido no toque los bordes */
+  margin-bottom: 10px; /* Margen para separarlo del siguiente elemento */
+}
+
+.scrollable-content {
+  max-height: 500px; /* Ajusta esta altura según tus necesidades o el diseño de tu página */
+  overflow-y: auto; /* Esto habilitará el desplazamiento vertical cuando el contenido exceda la altura máxima */
+}
+
+/* Personaliza todo el scrollbar */
+.scrollable-content::-webkit-scrollbar {
+  width: 5px; /* Controla el ancho del scrollbar, ajusta este valor para hacerlo más fino */
+}
+
+/* Personaliza el track del scrollbar (la parte que el thumb se desplaza) */
+.scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del track */
+}
+
+/* Personaliza el thumb del scrollbar (la parte que mueves) */
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888; /* Color de fondo del thumb */
+}
+
+/* Cambia el color del thumb al pasar el mouse sobre él */
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color de fondo del thumb al pasar el mouse */
+}
+
+.scrollable-content {
+  scrollbar-width: thin; /* Opciones: auto, thin, none */
+}

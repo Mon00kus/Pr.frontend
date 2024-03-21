@@ -67,11 +67,9 @@ export class PreguntaComponent implements OnInit {
 
   siguiente(): void {
     this.respuestaCuestionarioService.respuestas.push(this.idRespuestaSeleccionada);
-
     this.rtaConfirmada = false;
     this.index++;
     this.idRespuestaSeleccionada = -1;
-
     if (this.index === this.listPreguntas.length) {
       this.router.navigate(['/inicio/respuestaCuestionario']);
     }

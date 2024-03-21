@@ -1,1 +1,42 @@
-<p>respuesta-cuestionario works!</p>
+<div class="container">
+  <div class="row" style="width: 100%">
+
+    <div class="card text-center" style="width: 100%; background-color: #afc6a0;">
+      <h3
+      style="width: 100%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin-top: 10px;"
+      >Respuestas al cuestionario
+      </h3>
+    </div>
+    <div class="scrollable-content">
+      <div *ngFor="let pregunta of cuestionario.listPreguntas; let i = index" style="margin-top: 30px;margin-bottom: 10px;">
+        <div class="card-header">
+            <b>{{ pregunta.descripcion }}</b>
+        </div>
+        <ul class="list-group" *ngFor="let respuesta of pregunta.listRespuestas">
+            <li class="list-group-item"
+                [ngClass]="{ 'list-group-item-success': respuesta.esCorrecta == true && respuestaUsuario[i] == respuesta.id,
+                            'list-group-item-danger': respuesta.esCorrecta == false && respuestaUsuario[i] == respuesta.id  }">
+                {{ respuesta.descripcion }}
+                <span class="material-icons correct" *ngIf="respuesta.esCorrecta == true && respuestaUsuario[i] == respuesta.id">
+                    check_circle
+                </span>
+                <span class="material-icons incorrect" *ngIf="respuesta.esCorrecta == false && respuestaUsuario[i] == respuesta.id">
+                    highlight_off
+                </span>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <button
+        class="btn btn-secondary btn-lg"
+        style="margin-bottom: 20px"
+        routerLink="/inicio/listCuestionarios"
+      >
+        Volver
+      </button>
+    </div>
+
+  </div>
+</div>

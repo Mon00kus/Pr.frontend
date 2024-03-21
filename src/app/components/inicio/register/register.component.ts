@@ -32,7 +32,6 @@ export class RegisterComponent implements OnInit {
   }
 
   registrarUsuario(): void{
-    console.log(this.register);
 
     const usuario: Usuario = {
       nombreUsuario : this.register.value.usuario,
@@ -41,7 +40,6 @@ export class RegisterComponent implements OnInit {
     this.loading = true;
     this.usuarioService.saveUser(usuario).subscribe (data => {
 
-      console.log(data);
       this.toastr.success('Usuario ' + usuario.nombreUsuario  + ' registrado exitosamente', 'Usuario registrado');
       this.router.navigate(['/inicio/login']);
       this.loading = false;

@@ -16,6 +16,7 @@ import { CuetionarioComponent } from "./components/dashboard/cuestionarios/cueti
 import { ListCuestionariosComponent } from "./components/inicio/list-cuestionarios/list-cuestionarios.component";
 import { IngresarNombreComponent } from "./components/inicio/list-cuestionarios/ingresar-nombre/ingresar-nombre.component";
 import { PreguntaComponent } from "./components/inicio/list-cuestionarios/pregunta/pregunta.component";
+import { RespuestaCuestionarioComponent } from "./components/inicio/list-cuestionarios/respuesta-cuestionario/respuesta-cuestionario.component";
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'listCuestionarios', component: ListCuestionariosComponent },
     { path: 'ingresarNombre', component: IngresarNombreComponent},
-    { path: 'pregunta', component: PreguntaComponent}
+    { path: 'pregunta', component: PreguntaComponent},
+    { path: 'respuestaCuestionario', component: RespuestaCuestionarioComponent}
   ]},
   { path: 'dashboard', component: DashboardComponent, children:[
     { path: '', component: CuestionariosComponent },
