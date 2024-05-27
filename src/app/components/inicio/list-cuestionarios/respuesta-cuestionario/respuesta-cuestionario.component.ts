@@ -34,7 +34,6 @@ export class RespuestaCuestionarioComponent implements OnInit{
     if (this.respuestaCuestionarioService.idCuestionario===null){
       this.router.navigate(['/inicio']);
     }else{
-      console.log('vamos aca -->', this.respuestaCuestionarioService.respuestas);
       this.cuestionario = this.respuestaCuestionarioService.cuestionario!;
       this.respuestaUsuario = this.respuestaCuestionarioService.respuestas;
     }

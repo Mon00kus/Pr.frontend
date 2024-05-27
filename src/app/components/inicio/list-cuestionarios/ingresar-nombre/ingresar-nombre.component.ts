@@ -19,7 +19,7 @@ export class IngresarNombreComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.respuestaCuestionario.idCuestionario == null){
+    if( this.respuestaCuestionario.idCuestionario == null || this.respuestaCuestionario.idCuestionario==-1 ){
       this.router.navigate(['/inicio']);
     }
   }

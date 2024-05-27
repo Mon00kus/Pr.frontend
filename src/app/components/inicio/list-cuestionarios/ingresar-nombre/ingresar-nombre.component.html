@@ -18,14 +18,16 @@
                 style="font-size: x-large" [(ngModel)]="nombreParticipante" />
             </div>
           </div>
-          <button class="btn btn-success btn-sig" style="margin-left: 100px;" (click)="siguiente()">Siguiente
+          <button class="btn btn-success btn-sig"
+                  style="margin-left: 100px;"
+                  (click)="siguiente()"
+                  [disabled]="nombreParticipante==''">Siguiente
           </button>
         </div>
       </div>
     </div>
     <div class="mt-3">
-      <button class="btn btn-secondary btn-lg" style="margin-bottom: 20px" routerLink="/inicio/listCuestionarios">
-        Volver
+      <button class="btn btn-secondary btn-lg" style="margin-bottom: 20px" routerLink="/inicio/listCuestionarios">Volver
       </button>
     </div>
   </div>

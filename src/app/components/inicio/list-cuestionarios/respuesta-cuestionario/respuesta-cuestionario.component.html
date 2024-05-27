@@ -9,10 +9,10 @@
     </div>
     <div class="scrollable-content">
       <div *ngFor="let pregunta of cuestionario.listPreguntas; let i = index" style="margin-top: 30px;margin-bottom: 10px;">
-        <div class="card-header">
+        <div class="card-header" style="text-align: center;">
             <b>{{ pregunta.descripcion }}</b>
         </div>
-        <ul class="list-group" *ngFor="let respuesta of pregunta.listRespuestas">
+        <ul class="list-group" *ngFor="let respuesta of pregunta.listRespuestas" style="text-align: center;">
             <li class="list-group-item"
                 [ngClass]="{ 'list-group-item-success': respuesta.esCorrecta == true && respuestaUsuario[i] == respuesta.id,
                             'list-group-item-danger': respuesta.esCorrecta == false && respuestaUsuario[i] == respuesta.id  }">
