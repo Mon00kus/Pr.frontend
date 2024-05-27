@@ -1,0 +1,29 @@
+<div class="text-center">
+  <app-loading *ngif="loading"></app-loading>
+</div>
+<table class="table sm table-over">
+
+  <thead>
+    <th>Participante</th>
+    <th>Fecha</th>
+    <th>Hora</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cuestionarioRespuesta of listRespuestaCuestionario">
+      <td>{{ cuestionarioRespuesta.nombreParticipante | uppercase }}</td>
+      <td>{{ cuestionarioRespuesta.nombreParticipante | uppercase }}</td>
+      <td>{{ cuestionarioRespuesta.nombreParticipante | uppercase }}</td>
+      <td>
+        <div class="float-rigth">
+          <span class="material-icons">
+            search
+          </span>
+          <span class="material-icons">
+            delete
+          </span>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

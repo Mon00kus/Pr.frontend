@@ -32,6 +32,7 @@ import { PreguntaComponent } from './components/inicio/list-cuestionarios/pregun
 import { RespuestaCuestionarioComponent } from './components/inicio/list-cuestionarios/respuesta-cuestionario/respuesta-cuestionario.component';
 import { CuetionarioComponent } from './components/dashboard/cuestionarios/cuetionario/cuetionario.component';
 import { ListCuestionariosComponent } from './components/inicio/list-cuestionarios/list-cuestionarios.component';
+import { EstadisticasComponent } from './components/dashboard/cuestionarios/estadisticas/estadisticas.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { ListCuestionariosComponent } from './components/inicio/list-cuestionari
     PreguntaComponent,
     RespuestaCuestionarioComponent,
     CuetionarioComponent,
-    ListCuestionariosComponent
+    ListCuestionariosComponent,
+    EstadisticasComponent
   ],
   imports: [
     BrowserModule,
